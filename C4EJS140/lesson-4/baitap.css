@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+}
+div.banner{
+    position:fixed;
+    background-color:red;
+    width: 100vh;
+}
+input.banner{
+    margin-top: 1vh;
+    height: 3vh;
+    width: 50vh;
+    position: absolute;
+    right: 10vh;
+}
+button.banner{
+    margin-top: 1vh;
+    width: 4vh;
+    height: 3.6vh;
+    position: absolute;
+    vertical-align: center;
+    right: 6vh;
+    margin-left: 0;
+    padding: 0 0 0 0;
+}
+p.menu{
+    width: 100vh;
+}
+img.banner-img{
+    height: 5vh;
+    width: auto;
+    margin: 0 0 0 25px;
+    color: red;
+}
+div.menu{
+    padding:1vh;
+    width: 100vh;
+}
+div.container{
+    padding-left: 1vh;
+}
+span.product-name{
+    font-size: 20pt;
+}
+span.No{
+    color: gray;
+    font-size: 13pt;
+}
+div.price{
+    padding-left: 3vh;
+}
+span.price-discount{
+    font-size: 25pt;
+    color:red;
+}
+span.price-delete{
+    color: gray;
+    font-size: 13pt;
+    text-decoration: line-through;
+}
+span.price-paypermonth{
+    margin-right: 100vh;
+    float: right;
+}
+span.tragop{
+    float: right;
+}
+a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+ul.bonus-discount{
+    list-style: none;
+    padding-left:3px;
+}
+li{
+    margin-bottom: 10px;
+}
+.fa-regular.fa-circle-check{
+    background-color:greenyellow;
+    color: white;
+}
+arrow-up{
+    shape-outside: circle();
+}
+div.redeem{
+    margin-left: 3vh;
+    background-color: blanchedalmond;
+    width: 24vh;
+}
+.fa-brands.fa-facebook{
+    color: rgb(212, 156, 15);
+}
+span.redeem{
+    color: rgb(212, 156, 15);
+}
+.fa-solid.fa-circle-info{
+    color: rgb(212, 156, 15);
+}
+input.GB128{
+    margin-left: 10vh;
+    accent-color: red;
+}
+span.GB128{
+    margin-left: 9vh;
+}
+div.price-discount{
+    padding-left: 3vh;
+    accent-color: red;
+}
+div.bonus-discount{
+    margin-left: 3vh;
+}
+div.buy-choice{
+    margin-left: 3vh;
+}
+button.red-button{
+    width: 97vh;
+    background-color: red;
+    color: white;
+    margin-bottom: 1vh;
+}
+p.mua-ngay{
+    font-size: 16pt;
+    margin-bottom: 0.5vh;
+}
+p.sub-mua-ngay{
+    margin-top: 0;
+}
+button.blue-button{
+    background-color: blue;
+    color: white;
+    width: 48vh;
+    margin-right: 0.5vh;
+}
+span.near-shop{
+    float: right;
+    margin-right: 100vh;
+}
+div.old-buy{
+    padding-left: 3vh;
+}
+div.product-detail{
+    margin-left: 3vh;
+    width: 97vh;
+}
+p.product-detail{
+    text-align: center;
+    font-size: 15pt;
+}
+p.sub-product-detail{
+    text-align: justify;
+}
+div.up-button{
+    bottom:0vh;
+    right: 0vh;
+    position: fixed;
+    float: right;
+    margin-right: 100vh;
+}

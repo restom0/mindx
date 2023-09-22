@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#productList{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    margin: 10px auto;
+    line-height: 5vh;
+}
+img{
+    height: 50%;
+    width: 50%;
+}

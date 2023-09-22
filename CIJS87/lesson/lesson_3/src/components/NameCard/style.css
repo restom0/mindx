@@ -1,0 +1,26 @@
+.card {
+    width: 200px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    margin: 5px
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .age, .gender {
+    font-size: 14px;
+    font-style: italic;
+  }
+  
+  .female {
+    background-color: #eb34e5
+  }
+  
+  .male {
+    background-color: #34dceb
+  }

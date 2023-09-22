@@ -1,0 +1,89 @@
+*{
+    padding: 10px;
+}
+body{
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.banner{
+    display: flex;
+    height: 5vh;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.banner>.search-bar{
+    display: flex;
+    margin-right: 35%;
+    border: 1px solid black;
+}
+input.search{
+    width: 30vh;
+    border: none;
+}
+.banner>ul{
+    display: flex;
+    list-style: none;
+}
+.banner>ul>li{
+    padding-top: 2vh;
+    height: 3vh;
+    width: 10vh;
+}
+.banner>ul>li:hover{
+    background-color: #849FFF;
+    border-radius: 10px;
+    color: white;
+}
+div.all-info{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+}
+div.info{
+    display: flex;
+    height: 25vh;
+    border-radius: 16px;
+}
+div.info:hover{
+    border: 1px solid #516FD4;
+}
+div.img{
+    width: 10vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img1{
+    background-image: url('./image/Ellipse\ 1.png');
+}
+.img2{
+    background-image: url('./image/Ellipse\ 2.png');
+}
+.img3{
+    background-image: url('./image/Ellipse\ 3.png');
+}
+.img4{
+    background-image: url('./image/Ellipse\ 4.png');
+}
+.img5{
+    background-image: url('./image/Ellipse\ 5.png');
+}
+.img6{
+    background-image: url('./image/Ellipse\ 6.png');
+}
+span.icon{
+    border: 1px solid #516FD4;
+    color: #516FD4;
+    border-radius: 16px;
+    margin-bottom: 100px;
+}
+h2{
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.title>p{
+    margin-top: 0;
+    margin-bottom: 30px;
+}

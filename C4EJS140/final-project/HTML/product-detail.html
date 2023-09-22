@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhóm 1 - ASUS - Product Details</title>
+  <script src="../JS/product-detail.js"></script>
+  <link rel="stylesheet" href="../CSS/product-detail.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/d458b53c3b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true"
+    style="margin-top: 30vh;">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Giỏ hàng</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-primary">
+              <thead>
+                <tr>
+                  <th scope="col">Tên sản phẩm</th>
+                  <th scope="col">Đơn giá</th>
+                  <th scope="col">Số lượng</th>
+                  <th scope="col">Thành tiền</th>
+                  <th scope="col">Tùy chỉnh</th>
+                </tr>
+              </thead>
+              <tbody id="result">
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn-sm btn-success" onclick="changePage()">Thanh toán</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="headerDesktop" style="position: fixed;z-index:9999;background-color:white;width:100%">
+    <div class="headerLayerOne">
+      <div class="topLeftMenu">
+        <div class="topLeftMenu_one">
+          <a href="./homepage.html">
+            <img src="https://www.asus.com/media/Odin/images/header/ROG_normal.svg" alt="">
+          </a>
+        </div>
+        <div class="topLeftMenu_two">
+          <a href="https://www.asus.com/vn/proart/">
+            <img src="https://www.asus.com/media/Odin/images/header/ProArt_normal.svg" alt="">
+          </a>
+        </div>
+        <div class="topLeftMenu_three">
+          <a href="https://iot.asus.com/">
+            <img src="https://www.asus.com/media/Odin/images/header/IoT_normal.svg" alt="">
+          </a>
+        </div>
+
+
+      </div>
+      <div class="topRightMenu tool-hover">
+        <div class="topRightMenu_one item-hover">
+          <div class="object-hover">Gaming</div>
+          <div class="hiden-menu">
+            <div> <a href="https://rog.asus.com/vn/" style="text-decoration: none; color:black">ROG -
+                Republic of Gamers</a></div>
+            <div><a href="https://www.asus.com/campaign/tuf-gaming/vn/TUF"
+                style="text-decoration: none; color:black">Gaming</a></div>
+          </div>
+        </div>
+        <div class=" topRightMenu_two">
+          <a href="https://www.asus.com/vn/business/" style="text-decoration: none; color:black">Doanh Nghiệp</a>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    <div class="headerLayerTwo">
+      <div class="headerLayerTwo_left">
+        <a href="./homepage.html">
+          <img src="https://dlcdnimgs.asus.com/images/logo/logo-001.svg" alt="">
+        </a>
+      </div>
+      <div class="headerLayerTwo_right">
+        <div class="headerLayerTwo_right_one tool-hover">
+          <div class="object-hover"><a href="./store.html" style="text-decoration: none;color:black">Store</a>
+          </div>
+          <div class="item-hover">
+            <div class="object-hover">Máy Tính Xách Tay</div>
+            <div class="hiden-menu">
+              <div class="item-hover2">
+                <div class="object-hover2">Cá nhân</div>
+                <div class="hiden-menu2">
+                  <table>
+                    <tr>
+                      <th>THEO NHU CẦU</th>
+                      <th>THEO DÒNG</th>
+                    </tr>
+                    <tr>
+                      <td><i class=" fas fa-laptop"></i>
+                        <a href="https://www.asus.com/vn/laptops/for-home/all-series/filter?Category=Thin-and-light"
+                          style="text-decoration: none;color:black">Mỏng Nhẹ
+                        </a>
+                      </td>
+                      <td><a href="https://www.asus.com/vn/laptops/for-home/all-series/"
+                          style="text-decoration: none;color:black">Tất Cả
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-tv-alt"></i>
+                        <a href="https://www.asus.com/vn/laptops/for-home/all-series/filter?Category=OLED-display"
+                          style="text-decoration: none;color:black"> OLED display</a>
+                      </td>
+                      <td><a href="https://www.asus.com/vn/laptops/for-home/zenbook/"
+                          style="text-decoration: none;color:black">Zenbook</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-tablet"></i>
+                        <a href="https://www.asus.com/vn/laptops/for-home/all-series/filter?Category=Tablet-and-2-in-1-laptop"
+                          style="text-decoration: none;color:black"> Tablet &
+                          2-in-1-laptop</a>
+                      </td>
+                      <td><a href="https://www.asus.com/vn/laptops/for-home/vivobook/"
+                          style="text-decoration: none;color:black">Vivobook</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="far fa-clock"></i>
+                        <a href="https://www.asus.com/vn/laptops/for-home/all-series/filter?Category=Tablet-and-2-in-1-laptop"
+                          style="text-decoration: none;color:black"> Everyday use</a>
+                      </td>
+                      <td><a href="https://www.asus.com/vn/laptops/for-home/proart-studiobook/"
+                          style="text-decoration: none;color:black">ProArt
+                          Studiobook</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><a href="https://www.asus.com/vn/laptops/for-home/everyday-use/"
+                          style="text-decoration: none;color:black">Laptop Cơ Bản</a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div>Thiết bị di động</div>
+          <div>Màn Hình / Máy Bàn</div>
+          <div>Bo Mạch Chủ / Linh Kiện</div>
+          <div>Thiết Bị Mạng / IoT / Servers</div>
+          <div>Phụ Kiện</div>
+        </div>
+        <div class="headerLayerTwo_right_two">
+          <div>Mua Hàng</div>
+          <div>Hỗ Trợ</div>
+          <div><i class="fas fa-search"></i></div>
+          <button style="border:none;text-align:center" type="button" data-bs-toggle="modal"
+            data-bs-target="#cartModal"><i class='bx bx-cart-alt'></i></button>
+          <div><i class="far fa-user"></i></div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="headerLayerThree">
+      <a href="https://www.asus.com/vn/content/anti-fraud-announcement/" style="color: white;">Website chính thức của
+        ASUS Việt
+        Nam
+        [https://www.asus.com/vn/]</a>
+    </div>
+  </div>
+  <div id="title">
+
+  </div>
+  <div class="menu-container">
+    <hr>
+    <div id="productDescription"></div>
+    <hr>
+    <span style="font-size: 20pt;"><b>Chi tiết kỹ thuật</b>
+    </span>
+    <button type="button" onclick="showContent()" style="float: right; font-size: 20pt;border:none"><i
+        class="fa-solid fa-plus"></i></button>
+
+    <br>
+    <br>
+    <div id="productDetails">
+      <div id="title-product">
+        <p>SKU</p>
+        <p>Loại thiết bị</p>
+        <p>ID</p>
+        <p>Brand</p>
+        <p>Màu sắc</p>
+        <p>Kích cỡ màn hình</p>
+        <p>Khối lượng</p>
+        <p>Tồn kho</p>
+        <p>Hiển thị</p>
+        <br>
+        <p>Âm thanh</p>
+        <p>Bộ nguồn</p>
+        <p>Kích cỡ</p>
+        <br>
+        <p>Cổng kết nối</p>
+      </div>
+      <div id="product"></div>
+    </div>
+    <hr>
+    <div id="QA">
+      <span style="font-size: 20pt;"><b>Câu hỏi thường gặp</b></>
+        <button type="button" onclick="showContent2()" style="float: right; font-size: 20pt;border:none"><i
+            class="fa-solid fa-plus"></i></button>
+        <div id="qAndA"></div>
+    </div>
+    <hr>
+  </div>
+  <div class="ads">
+    <img src="https://vn.store.asus.com/media/wysiwyg/892x556_4.jpg" alt=""
+      style="width:50%; height:50%;display: block;margin-left: auto;margin-right: auto;" srcset="">
+  </div>
+  <div class="inforEnd">
+    <div class="shop flexColum">
+      <div>
+        <p><b>Mua Sắm và Học Tập</b></p>
+      </div>
+      <div class="flex3">
+        <div>
+          <ul class="paddingleft">
+            <li><b>Máy Tính Xách Tay</b></li>
+            <li>Cá Nhân</li>
+            <li>Văn Phòng</li>
+            <li>Sáng Tạo</li>
+            <li>Họ Tập</li>
+            <li>Chơi Game</li>
+            <li>Thiết Bị Di Động</li>
+            <li>Màn Hình Máy Tính Bàn</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Màn Hình</li>
+            <li>Máy Chiếu</li>
+            <li>On-In-One PCs</li>
+            <li>Towers PCs</li>
+            <li>Gaming Tower PCs</li>
+            <li>Workstations</li>
+            <li>Bo Mạch Chủ / Linh Kiện</li>
+            <li>Bo Mạch Chủ</li>
+            <li>Card Đồ Họa</li>
+            <li>Nguồn Máy Tính</li>
+            <li>Tản Nhiệt</li>
+            <li>ổ đĩa quang</li>
+            <li>Lưu trữ dữ liệu</li>
+            <li>Gaming Case</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><b>Thiết Bị Mạng IOT servers</b></li>
+            <li>Wifi 6</li>
+            <li>Router Wifi</li>
+            <li>Hệ thống Wifi phủ sóng toàn bộ căn nhà</li>
+            <li>AIOT và giải pháp công nghệ</li>
+            <li>Servers</li>
+            <li><b>Phụ Kiện</b></li>
+            <li>Tai nghe và âm thanh</li>
+            <li>Thiết bị Streaming</li>
+            <li>Trang Phục, Túi Xách và Sự Kiện</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="help flexColum">
+      <div>
+        <p><b>Hỗ Trợ</b></p>
+      </div>
+      <div>
+        <ul class="paddingleft">
+          <li>Gọi cho chúng tôi</li>
+          <li>Email cho chúng tôi</li>
+          <li>MyASUS App</li>
+          <li>Kiểm tra tiến độ sửa chữa</li>
+          <li>Tìm trung tâm dịch vụ</li>
+          <li>Hệ thống phân phối sản phẩm và Máy Tính Xách Tay</li>
+          <li>Hệ thống phân phối sản phẩm Doanh Nghiệp</li>
+          <li>Hệ thông phân phối Linh Kiện & Phụ Kiện</li>
+        </ul>
+      </div>
+    </div>
+    <div class="store flexColum">
+      <div>
+        <p><b>ASUS Store</b></p>
+      </div>
+      <div>
+        <ul class="paddingleft">
+          <li>Cửa hàng và Đại lí</li>
+          <li>Shop Online</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="iconEnd">
+    <div class="circle"><i class="fa-brands fa-facebook"></i></div>
+    <div class="circle"><i class="fa-brands fa-youtube"></i></div>
+    <div class="circle"><i class="fa-brands fa-instagram"></i></div>
+    <div class="circle"><i class="fa-brands fa-linkedin"></i></div>
+  </div>
+  <hr>
+  <div class="addressEnd">
+    <div>Thông tin hợp pháp | Qui chế pháp lý | ©ASUSTeK Computer Inc. Bảo lưu mọi quyền.</div>
+    <div><i class="fa-solid fa-globe"></i> VietNam / Việt Nam</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+.counter {
+    margin:4px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+}
+
+.counter h1 {
+    margin: 2px;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.counter button {
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    border: 1px solid #30CFD0;
+    border-radius: 3px;
+    color: white;
+    margin-bottom: 2px;
+}

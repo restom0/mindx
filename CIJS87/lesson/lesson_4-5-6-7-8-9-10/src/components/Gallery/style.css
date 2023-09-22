@@ -1,0 +1,11 @@
+.gallery {
+    margin: 16px;
+    padding: 32px;
+    padding-top: 16px;
+    box-shadow: 0 0 5px 5px #0fd850;
+    border-radius: 10%;
+}
+
+.gallery h1 {
+    color: #0fd850;
+}

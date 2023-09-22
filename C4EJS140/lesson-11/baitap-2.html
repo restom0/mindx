@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./baitap-2.css" />
+    <script src="./baitap-2.js"></script>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="input" readonly />
+      <input type="text" id="result" readonly />
+      <div class="buttons">
+        <button
+          onclick="clearResult()"
+          style="background-color: orange; color: white"
+        >
+          AC
+        </button>
+        <button
+          onclick="clear1Char()"
+          style="background-color: orange; color: white"
+        >
+          C
+        </button>
+        <button onclick="input('(')">(</button>
+        <button onclick="input(')')">)</button>
+        <button onclick="input('1')">1</button>
+        <button onclick="input('2')">2</button>
+        <button onclick="input('3')">3</button>
+        <button
+          onclick="input('+')"
+          style="background-color: orange; color: white"
+        >
+          +
+        </button>
+        <button onclick="input('4')">4</button>
+        <button onclick="input('5')">5</button>
+        <button onclick="input('6')">6</button>
+        <button
+          onclick="input('-')"
+          style="background-color: orange; color: white"
+        >
+          -
+        </button>
+        <button onclick="input('7')">7</button>
+        <button onclick="input('8')">8</button>
+        <button onclick="input('9')">9</button>
+        <button
+          onclick="input('*')"
+          style="background-color: orange; color: white"
+        >
+          *
+        </button>
+        <button onclick="input('.')">.</button>
+        <button
+          onclick="calculateResult()"
+          style="background-color: blue; color: white"
+        >
+          =
+        </button>
+        <button
+          onclick="input('/')"
+          style="background-color: orange; color: white"
+        >
+          /
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

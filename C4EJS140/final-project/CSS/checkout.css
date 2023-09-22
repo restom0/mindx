@@ -1,0 +1,461 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 130%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product {
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.btn-sm.btn-success,
+.btn-sm.btn-success.success {
+    border: 1px solid cornflowerblue;
+    font-size: 18pt;
+    font-weight: bold;
+    background-color: white;
+    color: cornflowerblue;
+    width: 20%;
+    height: 5vh;
+    float: right;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-sm.btn-success.success {
+    margin-right: 40vh;
+}
+
+.btn-sm.btn-success:hover {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+.vivobook .button_more button:hover {
+    background-color: rgb(226, 135, 67);
+    color: aliceblue;
+}
+
+
+/* .fourPicture div {
+    width: 950px;
+    height: 550px;
+    color: white;
+} */
+.fourPicture {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.fourPicture .pictureOne {
+    background-image: url(https://www.asus.com/WebsitesBanner/VN/banners/i0m8aokbv2dngsqb/i0m8aokbv2dngsqb-1_0_desktop_3_1X.jpg?webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 950px;
+    height: 550px;
+    color: white;
+}
+
+
+.fourPicture .pictureTwo {
+    background-image: url(https://www.asus.com/WebsitesBanner/VN/banners/i0m8aokbv2dngsqb/i0m8aokbv2dngsqb-0_0_desktop_1_1X.jpg?webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 950px;
+    height: 550px;
+    color: white;
+}
+
+.fourPicture .pictureThree {
+    background-image: url(https://www.asus.com/WebsitesBanner/VN/banners/i0m8aokbv2dngsqb/i0m8aokbv2dngsqb-2_0_desktop_2_1X.jpg?webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 950px;
+    height: 550px;
+    color: white;
+}
+
+.fourPicture .pictureFour {
+    background-image: url(https://www.asus.com/WebsitesBanner/VN/banners/i0m8aokbv2dngsqb/i0m8aokbv2dngsqb-3_0_desktop_0_1X.jpg?webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 950px;
+    height: 550px;
+    color: white;
+}
+
+.more {
+    text-decoration: none;
+    color: azure;
+    padding: 10px;
+}
+
+.more:hover {
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 40px;
+    color: rgb(205, 171, 130);
+    font-weight: 500;
+    padding: 10px;
+}
+
+.intro {
+    font-size: 30px;
+    color: rgb(255, 254, 252);
+    font-weight: 300;
+    padding: 10px;
+    text-align: center;
+}
+
+.blue {
+    color: rgb(29, 76, 170);
+}
+
+.black {
+    color: black;
+}
+
+.program {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.program .img {
+    background-color: beige;
+}
+
+.program .img p {
+    text-align: center;
+
+}
+
+.promotion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.promotion .title {
+    padding: 20px;
+}
+
+.promotion .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.promotion .item i {
+    font-size: 50px;
+}
+
+.inforEnd {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.flexColum {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.inforEnd .shop .flex3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+ul li {
+    list-style: none;
+}
+
+.paddingleft {
+    padding-left: 0px;
+}
+
+/* .bold {
+    font-weight: 600px;
+} */
+li {
+    padding-top: 10px;
+}
+
+.iconEnd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.circle {
+    /* width: 120%; */
+    border-radius: 25px;
+    background-color: rgb(105, 104, 104);
+    /* width: 200%; */
+
+}
+
+.circle i {
+
+    font-size: 200%;
+    border-radius: 25px;
+    color: white;
+
+}
+
+.circle i:hover {
+    color: black;
+    background-color: white;
+}
+
+.addressEnd {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px
+}
+
+.addressEnd div:hover {
+    text-decoration: underline;
+}
+
+#toggleIcon {
+    cursor: pointer;
+}
+
+#qAndA.show {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#qAndA {
+    display: none;
+}
+
+#QA {
+    margin-top: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+div.headerDesktop div.headerLayerOne {
+    overflow: hidden;
+    height: 36px;
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 300px;
+}
+
+div.headerDesktop div.headerLayerOne div.topLeftMenu {
+
+    margin-right: 200px;
+    width: 267px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.headerDesktop div.headerLayerOne div.topLeftMenu div a img {
+    width: 150%;
+}
+
+/* div.headerDesktop div.headerLayerOne div.topLeftMenu div.topLeftMenu_one {
+    padding: 0 16px 0 16px;
+    
+    border-right: 1px solid rgb(21, 20, 20);
+}
+div.headerDesktop div.headerLayerOne div.topLeftMenu div.topLeftMenu_two {
+    padding: 0 16px 0 16px;
+}
+div.headerDesktop div.headerLayerOne div.topLeftMenu div.topLeftMenu_three {
+    padding: 0 16px 0 16px;
+    border-left: 1px solid rgb(21, 20, 20);
+} */
+div.headerDesktop div.headerLayerOne div.topRightMenu {
+    overflow: hidden;
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+
+
+.tool-hover {
+    overflow: hidden;
+    background-color: white;
+}
+
+.item-hover {
+    overflow: hidden;
+}
+
+/* .item-hover .object-hover {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+} */
+.object-hover:hover {
+    text-decoration: underline;
+}
+
+.item-hover:hover .object-hover {
+    background-color: white;
+}
+
+.hiden-menu {
+    display: none;
+    position: absolute;
+    /* right: 0px; */
+    margin: 0px;
+    background-color: white;
+    width: 300px;
+    z-index: 1;
+    border: 0.5px solid gray;
+}
+
+
+.item-hover:hover .hiden-menu {
+    display: block;
+}
+
+.hiden-menu div {
+    margin: 10px 0 10px 0;
+}
+
+/* // */
+.item-hover2 {
+    overflow: hidden;
+}
+
+.object-hover2:hover {
+    text-decoration: underline;
+}
+
+.item-hover2:hover .object-hover2 {
+    background-color: white;
+}
+
+.hiden-menu2 {
+    display: none;
+    position: absolute;
+    top: -13px;
+    left: 300px;
+    /* right: 0px; */
+    margin: 0px;
+    background-color: white;
+    width: 300px;
+    z-index: 1;
+    border: 0.5px solid gray;
+    width: 400px;
+    height: 300px;
+}
+
+.hiden-menu2 table {
+    width: 400px;
+    height: 300px;
+}
+
+.item-hover2:hover .hiden-menu2 {
+    display: block;
+}
+
+.hiden-menu2 div {
+    margin: 10px 0 10px 0;
+}
+
+
+
+
+
+
+
+div.headerDesktop div.headerLayerTwo {
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+div.headerDesktop div.headerLayerTwo div.headerLayerTwo_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+div.headerDesktop div.headerLayerTwo div.headerLayerTwo_right div.headerLayerTwo_right_one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+div.headerDesktop div.headerLayerTwo div.headerLayerTwo_right div.headerLayerTwo_right_two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+div.headerDesktop div.headerLayerThree {
+    height: 60px;
+    color: white;
+    background-color: rgb(1, 94, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

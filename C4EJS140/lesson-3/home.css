@@ -1,0 +1,19 @@
+body{
+    background-color:rgb(202, 232, 250);
+}
+h1,h2{
+    color: rgb(9, 148, 148);
+    font-weight: bold;
+    font: "Georgia"
+}
+img{
+    height: 5cm;
+    width: 5cm;
+    clip-path: circle();
+}
+.fa-solid.fa-star{
+    color: yellow;
+}
+hr{
+    border: 3px dashed rgb(9, 148, 148);
+}
