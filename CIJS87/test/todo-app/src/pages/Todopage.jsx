@@ -25,15 +25,18 @@ function Todopage() {
         }
     })
     const todoList = todo.map((item, index) =>
-        <Row className='mb-1'>
-            <Col className='col-md-1'>{
-                item.status === false ?
-                    <input class="form-check-input" type="checkbox" onChange={(e) => updateTodo(index - 1, e)} name="" id="" />
-                    :
-                    <input type="checkbox" checked disabled name="" id="" />
-            }</Col>
-            <Col className='col-md-10'>{item.todo}</Col>
-            <Col className='col-md-1'><button className='btn btn-danger' onClick={() => deleteTodo(item.id)}><box-icon name='trash'></box-icon></button></Col>
+        <Row>
+            <Row className='mb-1'>
+                <Col className='col-md-1'>{
+                    item.status === false ?
+                        <input class="form-check-input" type="checkbox" onChange={(e) => updateTodo(index - 1, e)} name="" id="" />
+                        :
+                        <input type="checkbox" checked disabled name="" id="" />
+                }</Col>
+                <Col className='col-md-10'>{item.todo}</Col>
+                <Col className='col-md-1' style={{ paddingLeft: "24px" }}><button className='btn btn-danger btn-sm' onClick={() => deleteTodo(item.id)}><box-icon name='trash'></box-icon></button></Col>
+            </Row>
+            <hr />
         </Row>
     )
     useEffect(() => {
@@ -160,7 +163,7 @@ function Todopage() {
                     </Nav.Item>
                 </Nav>
                 <div className='mt-4 row w-100'>
-                    <div className='row mt-3 ms-3'>
+                    <div className='row mt-3 ms-4'>
                         <div className="col-md-9">
                             <input type="text" className="form-control" placeholder='Todo' onChange={(e) => setItem(e.target.value)} id="" />
                         </div>
@@ -168,13 +171,13 @@ function Todopage() {
                             <button className='btn btn-primary w-100' onClick={addTodo}>Add</button>
                         </div>
                     </div>
-                    <div className="row mt-3 ms-3">
+                    <div className="row mt-3 ms-5">
                         {todo && (
                             <Row>
                                 {todoList}
                             </Row>
                         )}
-                        <Row>
+                        <Row className='mt-3'>
                             <Col></Col>
                             <Col></Col>
                             <Col>
