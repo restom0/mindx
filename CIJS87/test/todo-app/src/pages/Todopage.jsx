@@ -25,16 +25,16 @@ function Todopage() {
         }
     })
     const todoList = todo.map((item, index) =>
-        <Row>
+        <Row key={item.id}>
             <Row className='mb-1'>
                 <Col className='col-md-1'>{
                     item.status === false ?
-                        <input class="form-check-input" type="checkbox" onChange={(e) => updateTodo(index - 1, e)} name="" id="" />
+                        <input className="form-check-input" type="checkbox" onChange={(e) => updateTodo(item.id, e)} name="" id="" />
                         :
                         <input type="checkbox" checked disabled name="" id="" />
                 }</Col>
                 <Col className='col-md-10'>{item.todo}</Col>
-                <Col className='col-md-1' style={{ paddingLeft: "24px" }}><button className='btn btn-danger btn-sm' onClick={() => deleteTodo(item.id)}><box-icon name='trash'></box-icon></button></Col>
+                <Col className='col-md-1' style={{ paddingLeft: "24px" }}><button className='btn btn-danger btn-sm' onClick={() => deleteTodo(item.id)}><box-icon name='trash' color='#ffffff'></box-icon></button></Col>
             </Row>
             <hr />
         </Row>
@@ -100,12 +100,12 @@ function Todopage() {
                 }).then(() => {
                     var item = JSON.parse(localStorage.getItem('todo'));
                     item.map((todo) => {
-                        if (todo.id !== i) {
+                        if (todo.id === i) {
                             todo['status'] = true;
                         }
                     })
                     localStorage.setItem('todo', JSON.stringify(item));
-                    changepage(0);
+                    changepage(currentPage);
                 });
             } else if (result.isDenied) { }
         })
@@ -129,22 +129,24 @@ function Todopage() {
         })
     }
     const changepage = (status) => {
-        var item = JSON.parse(localStorage.getItem('todo'));
-        if (item.length > 0) {
-            switch (status) {
-                case 0:
-                    item = item.filter((todo) => todo.status === false);
-                    break;
-                case 1:
-                    item = item.filter((todo) => todo.status === true);
-                    break;
-                default:
-                    break;
-            }
-            setCurrentPage(status);
-            setTodo(item);
+        var item = JSON.parse(localStorage.getItem('todo')) || [];
+        let filteredItems;
+
+        switch (status) {
+            case 0:
+                filteredItems = item.filter((todo) => todo.status === false);
+                break;
+            case 1:
+                filteredItems = item.filter((todo) => todo.status === true);
+                break;
+            default:
+                filteredItems = item;
+                break;
         }
-    }
+        setCurrentPage(status);
+        setTodo(filteredItems);
+    };
+
     return (
         <div>
             <Container style={{ width: "40%" }}>
