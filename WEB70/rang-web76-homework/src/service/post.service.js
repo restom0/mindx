@@ -6,15 +6,18 @@ import { CommonUtils } from "../utils/common.util.js";
 import { BadRequestError } from "../error/BadRequest.error.js";
 import { CommentService as commentService } from "./comment.service.js";
 import { CommentDTO } from "../dto/comment.dto.js";
-import PostModel from "../models/post.model.js";
+import { PostModel } from "../models/post.model.js";
 
 const postUrl = DB_CONFIG.baseUrl + DB_CONFIG.resources.post.contextPath;
 
+async function getAll() {
+  return await PostModel.find({});
+}
 async function getById(id) {
-  return await PostModel.getById(id);
+  return await PostModel.findById(id);
 }
 
-async function addPostComment(comment, postId) {
+async function addComment(comment, postId) {
   if (!(comment instanceof CommentDTO)) {
     throw new Error("Invalid comment object");
   }
@@ -24,9 +27,6 @@ async function addPostComment(comment, postId) {
   if (CommonUtils.checkNullOrUndefined(post)) {
     throw new BadRequestError(ERROR_MSG.POST_NOT_FOUND + postId);
   }
-
-  // Check thêm field nào require và format gì thêm vào nếu nghiệp vụ yêu cầu
-  // không thì thôi insert luôn
   comment.postId = post.id;
 
   return await commentService.create(comment);
@@ -38,5 +38,6 @@ function postIdGenerator() {
 
 export const PostService = {
   getById,
-  addPostComment,
+  addComment,
+  getAll,
 };

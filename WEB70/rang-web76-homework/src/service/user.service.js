@@ -7,7 +7,9 @@ import { CommentDTO } from "../dto/comment.dto.js";
 import { CommonUtils } from "../utils/common.util.js";
 import { ERROR_MSG } from "../constants/errorMessage.constant.js";
 import { PostService as postService } from "./post.service.js";
-import UserModel from "../models/user.model.js";
+import { UserModel } from "../models/user.model.js";
+import { BadRequestError } from "../error/BadRequest.error.js";
+import bcrypt from "bcrypt";
 
 const userUrl = DB_CONFIG.baseUrl + DB_CONFIG.resources.user.contextPath;
 
@@ -30,7 +32,6 @@ async function registerUser(user) {
   if (!newUser) {
     throw new Error("Failed to register user");
   }
-
   return newUser;
 }
 
@@ -55,7 +56,16 @@ async function commentOnPostByPostId(comment, userId, postId) {
 function userIdGenerator() {
   return "US" + v4();
 }
-
+async function login(email, password) {
+  const user = await UserModel.findOne({ email });
+  if (!user) {
+    throw new BadRequestError(ERROR_MSG.USER_NOT_FOUND);
+  }
+  const isMatch = bcrypt.compareSync(password, user.password);
+  if (!isMatch) {
+    throw new BadRequestError("password không khớp");
+  }
+}
 export const UserService = {
   registerUser,
   getAllUsers,
